@@ -1,2 +1,122 @@
+@import url(http://fonts.googleapis.com/css?family=Indie+Flower|Mako);
+
 /* for the nav bar */
-body { padding-top: 70px; }
+body { padding-top: 150px; }
+
+/* navbar */
+
+.navbar-brand {
+	padding-top: 75px;
+    padding-left: 5em;
+}
+
+.navbar-nav li a {
+    line-height: 200px;
+    height: 150px;
+    padding-top: 0;
+}
+
+.mkat-nav {
+	position: fixed;
+	right: 0;
+	left: 0;
+	top: 0;
+	z-index: 1033;
+	background: white;
+}
+
+.mkat-nav .mkat-brand {
+	font-family: 'Indie Flower', cursive;
+	font-size: 15pt;
+	font-weight: bold;
+	text-transform: uppercase;
+	color: #009738;
+	padding-bottom: 1em;
+}
+
+.mkat-nav ul {
+	line-height: 2em;
+	padding-left: 1em;
+}
+
+.mkat-nav li {
+	display: inline;
+	padding: 1em;
+	font-size: 8pt;
+}
+
+.mkat-nav {
+	padding-top: 1em;
+	padding-bottom: 1em;
+}
+
+.mkat-menu ul li.active,
+.mkat-menu ul li.active a
+ {
+	background: #009738;
+	color: white;
+	font-weight: bold;
+}
+
+a {
+	color: #009738;
+	text-transform: uppercase;	
+}
+
+/* body */
+
+header {
+	font-family: 'Indie Flower', cursive;
+	color: #009738;
+	font-size: 30pt;
+}
+
+h2 {
+	font-family: 'Indie Flower', cursive;
+	color: #009738;
+	font-size: 25pt;
+}
+
+header p {
+	padding-left: 1em;
+}
+
+header p:first-child {
+	padding-left: 0px;
+}
+
+body {
+	font-family: 'Mako', sans-serif;
+}
+
+/*
+ul.nav li {
+	text-transform: uppercase;
+}
+
+ul.nav li a {
+	color: #009738;
+}
+*/
+
+/* navbar */
+
+/*
+.navbar-brand {
+	font-family: 'Indie Flower', cursive;
+	font-size: 20pt;
+	text-transform: uppercase;
+}
+
+.navbar-default {
+	background-color: white;
+	border-color: white;
+}
+
+.navbar-default .navbar-brand,
+.navbar-default .navbar-nav > li > a,
+.navbar-default .navbar-nav > li > a:active,
+.navbar-default .navbar-nav > li > a:hover {
+	color: #009738;
+}
+*/
