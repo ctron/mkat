@@ -11,71 +11,50 @@
 	<link href="css/custom.css" rel="stylesheet">
 	
 	<title>MKAT</title>
+	
+	<script type="text/javascript">
+	function selectMenuById ( id ) {
+		$('.mkat-menu li').removeClass("active");
+		var p = $('.mkat-menu a[href=#'+id+']').parents();
+		if ( p.size () == 0 )
+			$("#first").addClass("active");
+		else
+			p.addClass("active");	
+	}
+	function selectMenu ( ele ) {
+		$('.mkat-menu li').removeClass("active");
+		ele.parent().addClass("active");	
+	}
+	</script>
 </head>
 
 <body>
-
-	<!-- 
-	<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
-		<div class="container-fluid">
-		
-		 
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-        <span class="sr-only">Toggle navigation</span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-      <a class="navbar-brand" href="#">Mark Kirchseeoner<br/>Auto-Teiler e.V.</a>
-    </div>
-	
-    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-      <ul class="nav navbar-nav">
-        <li class="active"><a href="#first">First <span class="sr-only">(current)</span></a></li>
-        <li><a href="#second">Fahrzeuge</a></li>      
-        <li><a href="#third">Standorte</a></li>
-        <li><a href="#forth">Kosten</a></li>
-        <li><a href="#third">Auto Buchen</a></li>
-        <li><a href="#third">FAQ</a></li>
-        <li><a href="#third">Mitglied werden</a></li>
-        <li><a href="#third">Login</a></li>
-      </ul>     
-    </div> <! - - /.navbar-collapse - ->
-		
-		</div>
-	</nav>
-	-->
 	
 	<nav class="mkat-nav" role="navigation">
 		<div class="container-fluid">
 			<div class="row">
 				<div class="col-xs-0 col-md-1 col-lg-2"></div>
 				<div class="col-xs-12 col-md-4 col-lg-3 mkat-brand">
-				<!-- 
-				<img src="images/icon.png" style="float: left; padding-right: 1em;"/>
-				Markt Kirchseeoner<br/>Auto-Teiler e.V.
-				 -->
 				 <img src="images/logo.png" class="img-responsive" />
 				</div>
 				<div class="col-xs-12 col-md-7 col-lg-7 mkat-menu">
 					<ul>
-						<li class="active"><a href="#first">First</a></li>
-				        <li><a href="#second">Fahrzeuge</a></li>      
-				        <li><a href="#third">Standorte</a></li>
-				        <li><a href="#forth">Kosten</a></li>
-				        <li><a href="#third">Auto Buchen</a></li>
-				        <li><a href="#third">FAQ</a></li>
-				        <li><a href="#third">Mitglied werden</a></li>
-				        <li><a href="#third">Login</a></li>
+						<li id="first" class="active"><a class="menu-entry" href="">First</a></li>
+				        <li><a class="menu-entry" href="#second">Fahrzeuge</a></li>      
+				        <li><a class="menu-entry" href="#third">Standorte</a></li>
+				        <li><a class="menu-entry" href="#forth">Kosten</a></li>
+				        <li><a class="menu-entry" href="#fifth">Auto Buchen</a></li>
+				        <li><a class="menu-entry" href="#sixth">FAQ</a></li>
+				        <li><a class="menu-entry" href="#seventh">Mitglied werden</a></li>
+				        <li><a class="menu-entry" href="#eighth">Login</a></li>
 					</ul>
 				</div>
 			</div>
 		</div>
 	</nav>
-
 	
-	<div class="container-fluid">
+	
+	<div id="main" class="container-fluid">
 	
 	<div class="col-xs-0 col-md-1 col-lg-2"></div>
 	
@@ -127,11 +106,35 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque molestie r
 	<script src="js/custom.js"></script>
 	<script src="js/waypoints.js"></script>
 	
+	<script src="js/jquery.scrollTo.js"></script>
+	<script src="js/jquery.localScroll.js"></script>
+	
 	<script>
-	$('.topic').waypoint(function() {
-		console.log ("Hit: " + this.id );
-		$('.mkat-menu li').removeClass("active");
-		$('.mkat-menu a[href=#'+this.id+']').parents().addClass("active");
+	
+	/*
+	$( ".menu-entry" ).bind( "click", function() {
+		  document.location=this.href;
+		  selectMenu ( $(this) );
+		  return false;
+	});
+	*/
+	$(".mkat-menu").localScroll ({
+		queue: true,
+		hash: true,
+		duration: 250,
+		onAfter: function ( anchor, settings ) {
+			console.log (  anchor);
+			var id = anchor[0].id;
+			console.log ( id );
+			selectMenuById ( id );
+		}
+	});
+	
+	$('.topic').waypoint({
+		handler: function() {
+			selectMenuById ( this.id );
+		},
+		offset: "150px"
 	});
 	</script>
 </body>

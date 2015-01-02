@@ -1,7 +1,7 @@
 @import url(http://fonts.googleapis.com/css?family=Indie+Flower|Mako);
 
 /* for the nav bar */
-body { padding-top: 150px; }
+body { }
 
 /* navbar */
 
@@ -61,6 +61,35 @@ body { padding-top: 150px; }
 a {
 	color: #009738;
 	text-transform: uppercase;	
+}
+
+#main {
+	margin-top: 150px;
+}
+
+/* header image */
+
+.scroll-box {
+	height: 100vh;
+	
+	perspective: 1px;
+	overflow-x: hidden;
+	overflow-y: auto;
+}
+
+.pscroll {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	height: 400px;
+}
+
+
+.header-image {
+	x-height: 400px;
+	transform: translateZ(-1px) scale(2.0);
 }
 
 /* body */
