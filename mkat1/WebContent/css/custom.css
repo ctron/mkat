@@ -73,6 +73,17 @@ a {
 	padding-bottom: 3em;
 }
 
+.topic {
+	padding-top: 150px;
+}
+
+.faq-entry {
+	padding-top: 150px;
+}
+.faq-details {
+	padding-bottom: 5em;
+}
+
 /* header image */
 
 .scroll-box {
