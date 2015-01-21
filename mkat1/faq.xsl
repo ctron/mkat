@@ -75,11 +75,12 @@
 				</div>
 				<div class="col-xs-12 col-md-7 col-lg-7 mkat-menu">
 					<ul>
-						<li id="faq"><a class="menu-entry" href="index.html">Wie funktioniert es?</a></li>
+						<li id="faq"><a class="menu-entry" href="index.html">Wer sind wir?</a></li>
 				        <li><a class="menu-entry" href="index.html#member">Mitglied werden</a></li>
 				        <li><a target="_blank" href="https://buchung.elkato.de/mkat">Zur Buchung</a></li>
 				        <li><a class="menu-entry" href="index.html#downloads">Downloads</a></li>
 				        <li class="active"><a class="menu-entry" href="">FAQ</a></li>
+				        <li><a class="menu-entry" href="index.html#impress">Impressum</a></li>
 					</ul>
 				</div>
 			</div>
