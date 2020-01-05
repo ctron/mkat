@@ -1,1 +1,0 @@
-http://ironsummitmedia.github.io/startbootstrap-agency/
