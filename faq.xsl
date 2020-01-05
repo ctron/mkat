@@ -123,7 +123,7 @@
 	
 	</div><!-- global -->
 	
-	<script src="js/jquery-1.11.1.min.js"></script>
+	<script src="js/jquery-1.12.4.min.js"></script>
 	<script src="js/bootstrap.min.js"></script>
 	<script src="js/custom.js"></script>
 	<script src="js/waypoints.js"></script>
