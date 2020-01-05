@@ -117,9 +117,12 @@ header {
 	font-size: 30pt;
 }
 
-h2 {
+h1, h2, h3 {
 	font-family: 'Indie Flower', cursive;
 	color: #009738;
+}
+
+h2 {
 	font-size: 25pt;
 }
 
@@ -134,35 +137,3 @@ header p:first-child {
 body {
 	font-family: 'Mako', sans-serif;
 }
-
-/*
-ul.nav li {
-	text-transform: uppercase;
-}
-
-ul.nav li a {
-	color: #009738;
-}
-*/
-
-/* navbar */
-
-/*
-.navbar-brand {
-	font-family: 'Indie Flower', cursive;
-	font-size: 20pt;
-	text-transform: uppercase;
-}
-
-.navbar-default {
-	background-color: white;
-	border-color: white;
-}
-
-.navbar-default .navbar-brand,
-.navbar-default .navbar-nav > li > a,
-.navbar-default .navbar-nav > li > a:active,
-.navbar-default .navbar-nav > li > a:hover {
-	color: #009738;
-}
-*/
