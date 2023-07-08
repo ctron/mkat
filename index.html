@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="de">
 
 <head>
 	<meta charset="UTF-8">
@@ -16,7 +16,7 @@
 	function selectMenuById ( id ) {
 		$('.mkat-menu li').removeClass("active");
 		var p = $('.mkat-menu a[href=#'+id+']').parents();
-		if ( p.size () == 0 )
+		if ( p.size () === 0 )
 			$("#first").addClass("active");
 		else
 			p.addClass("active");
